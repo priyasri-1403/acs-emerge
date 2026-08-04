@@ -42,12 +42,14 @@ export default function decorate(block) {
     const poster = block.querySelector('picture img');
     const video = buildBackgroundVideo(videoLink, poster);
 
-    // Swap the authored link (and any poster picture) for the background video.
-    const linkWrapper = videoLink.closest('p') || videoLink;
-    linkWrapper.replaceWith(video);
+    // Remove the authored link (and any poster picture) from the content flow...
+    (videoLink.closest('p') || videoLink).remove();
     const picture = block.querySelector('picture');
     if (picture) (picture.closest('p') || picture).remove();
 
+    // ...and add the video as the first *direct* child of the block so it can be
+    // layered as a full-bleed background behind the content (see CSS z-index layers).
+    block.prepend(video);
     block.classList.add('has-video');
   }
 }

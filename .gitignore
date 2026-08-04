@@ -8,6 +8,10 @@ helix-importer-ui
 *.bak
 .idea
 
+# Local tooling artifacts (not tracked)
+.agents/
+.migration/
+
 # Ensure these files are tracked
 !CLAUDE.md
 !AGENTS.md

@@ -1,0 +1,47 @@
+{
+  "variantName": "cards-emerge",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-05T00:00:00.000Z",
+  "sourceContext": {
+    "source": "figma",
+    "figmaFileKey": "orYlw2Ani5PMc1XdczWNlu",
+    "figmaNodeId": "15998:1153",
+    "figmaNodeName": "What EMERGE stands for",
+    "figmaUrl": "https://figma.com/design/orYlw2Ani5PMc1XdczWNlu?node-id=15998-1153",
+    "groundTruth": "user-provided screenshot (Figma API rate-limited during build)"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "feature",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "centered eyebrow + heading intro, then a vertical list of letter + title + description rows",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "acronym / initialism breakdown lists",
+      "feature lists with a large leading glyph per row",
+      "value-proposition sections with a centered intro"
+    ],
+    "notSuitableFor": [
+      "image-led card grids (this variant is text-only, single column)",
+      "sections needing CTAs per row"
+    ]
+  },
+  "knownGaps": [
+    "Decorative butterfly graphic and wireframe-mesh background omitted (assets unavailable via API).",
+    "Colors and type sizes are screenshot-derived approximations, not exact Figma variable values."
+  ],
+  "usage": {
+    "pagesUsing": [
+      "drafts/cards-emerge"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-05T00:00:00.000Z"
+  }
+}

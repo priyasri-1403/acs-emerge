@@ -1,0 +1,53 @@
+/* blocks/cards-emerge/cards-emerge-tokens.css */
+
+/* Values derived from the Figma screenshot (node 15998:1153). Colors/sizes are
+   close approximations pending exact design_context extraction. Only visible
+   elements are represented — decorative butterfly/mesh are intentionally omitted. */
+
+.cards-emerge {
+  /* ===== COLORS ===== */
+  --cards-emerge-bg: #fff;
+  --cards-emerge-eyebrow-color: #6b6b6b;
+  --cards-emerge-heading-color: #1a1a1a;
+  --cards-emerge-letter-color: #e0197d;
+  --cards-emerge-title-color: #1a1a1a;
+  --cards-emerge-subtitle-color: #6b6b6b;
+
+  /* ===== TYPOGRAPHY (mobile base) ===== */
+  --cards-emerge-eyebrow-size: 12px;
+  --cards-emerge-eyebrow-weight: 600;
+  --cards-emerge-eyebrow-spacing: 1px;
+  --cards-emerge-heading-size: 24px;
+  --cards-emerge-heading-weight: 600;
+  --cards-emerge-heading-line-height: 1.3;
+  --cards-emerge-letter-size: 40px;
+  --cards-emerge-letter-weight: 700;
+  --cards-emerge-letter-line-height: 1;
+  --cards-emerge-title-size: 17px;
+  --cards-emerge-title-weight: 700;
+  --cards-emerge-title-line-height: 1.3;
+  --cards-emerge-subtitle-size: 13px;
+  --cards-emerge-subtitle-weight: 400;
+  --cards-emerge-subtitle-line-height: 1.4;
+
+  /* ===== TYPOGRAPHY (desktop overrides, applied via media query) ===== */
+  --cards-emerge-heading-size-desktop: 34px;
+  --cards-emerge-letter-size-desktop: 48px;
+  --cards-emerge-title-size-desktop: 18px;
+
+  /* ===== SPACING (mobile base) ===== */
+  --cards-emerge-section-padding-block: 32px;
+  --cards-emerge-section-padding-inline: 20px;
+  --cards-emerge-intro-gap: 12px;
+  --cards-emerge-intro-margin-bottom: 32px;
+  --cards-emerge-intro-max-width: 640px;
+  --cards-emerge-list-gap: 20px;
+  --cards-emerge-list-max-width: 620px;
+  --cards-emerge-row-gap: 16px;
+  --cards-emerge-title-subtitle-gap: 4px;
+  --cards-emerge-letter-col-width: 44px;
+
+  /* ===== SPACING (desktop overrides) ===== */
+  --cards-emerge-list-gap-desktop: 24px;
+  --cards-emerge-letter-col-width-desktop: 56px;
+}

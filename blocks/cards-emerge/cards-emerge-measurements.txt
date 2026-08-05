@@ -1,0 +1,46 @@
+VISUAL MEASUREMENT CHECKLIST FOR cards-emerge
+================================================
+Source: Figma node 15998:1153 (ACS_GDC_Hub_v2.1-1)
+Ground truth: user-provided SCREENSHOT (Figma API rate-limited).
+Only VISIBLE elements are used. No hidden layers.
+Date: 2026-08-05
+
+VISIBLE CONTENT (from screenshot)
+- Eyebrow label: "WHAT EMERGE STANDS FOR" (small, gray, uppercase, letter-spaced, centered)
+- Heading: "EMERGE demands a lean, delayered organisation where optimal spans and
+  manager mix unlock speed, accountability, and outcome ownership at scale."
+  (large, dark, centered, medium/semibold weight)
+- 6 acronym rows, each = big magenta initial letter + bold dark title + gray subtitle:
+  E - Excellence in AI-Native Delivery / "Excellence in AI-Native Delivery"
+  M - Measurable Customer Value at Scale / "Customer Value Acceleration Hub powered by Enterprise Architects"
+  E - Embedded Regional Co-Ownership / "Two-in-a-Box Regional Model"
+  R - Reimagined Innovation & Talent Capability / "Innovation Hub powered by Competency"
+  G - Global Strategic Partnerships / "Global ACS Partnerships Model & Strategic Partner Model"
+  E - Engineering Skillset in a Consultant Deployed by Account & Industry / "Forward Deployed Engineering Consultant (FDE-C)"
+
+DECORATIVE (NOT built — assets unavailable via API; flagged as follow-up)
+- Colorful butterfly graphic (upper right of the list)
+- Faint gray wireframe/mesh sphere background behind the list
+- Thin blue page border frame (page chrome, not part of the block)
+
+COLORS (estimated from screenshot; refine when API/design_context available)
+[x] Eyebrow text color: #6b6b6b (medium gray)
+[x] Heading text color: #1a1a1a (near-black)
+[x] Acronym letter color: #e0197d (magenta/pink) -- approximate
+[x] Item title color: #1a1a1a (near-black)
+[x] Item subtitle color: #6b6b6b (medium gray)
+[x] Background: #ffffff (white)
+
+TYPOGRAPHY (relative; exact px pending design_context)
+[x] Eyebrow: ~12px, uppercase, letter-spacing ~1px, semibold
+[x] Heading: ~28px mobile scaling up on desktop, weight ~600, line-height ~1.3
+[x] Acronym letter: large ~40-48px, weight 700
+[x] Item title: ~18px, weight 700
+[x] Item subtitle: ~13px, weight 400
+
+LAYOUT
+[x] Overall: centered intro (eyebrow + heading), then a vertical list of 6 rows
+[x] Row layout: letter column (left) + text column (right), vertically centered
+[x] Mobile-first: single column list; letter sits left of text at all widths
+[x] Intro max-width constrains heading line length on desktop
+[x] Alignment: intro centered; list rows left-aligned text with left letter

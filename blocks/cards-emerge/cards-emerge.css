@@ -1,0 +1,116 @@
+/* Import component-specific tokens */
+@import url('./cards-emerge-tokens.css');
+
+/*
+ * cards-emerge block — "What EMERGE stands for" acronym list.
+ * Mobile-first: base rules target mobile; min-width media queries layer on
+ * tablet/desktop styling. Only visible design elements are rendered.
+ */
+
+/* ===== Block container ===== */
+.cards-emerge {
+  padding: var(--cards-emerge-section-padding-block) var(--cards-emerge-section-padding-inline);
+  background: var(--cards-emerge-bg);
+}
+
+/* ===== Intro (eyebrow + heading), centered ===== */
+.cards-emerge .cards-emerge-intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cards-emerge-intro-gap);
+  max-width: var(--cards-emerge-intro-max-width);
+  margin: 0 auto var(--cards-emerge-intro-margin-bottom);
+  text-align: center;
+}
+
+.cards-emerge .cards-emerge-eyebrow {
+  margin: 0;
+  color: var(--cards-emerge-eyebrow-color);
+  font-size: var(--cards-emerge-eyebrow-size);
+  font-weight: var(--cards-emerge-eyebrow-weight);
+  letter-spacing: var(--cards-emerge-eyebrow-spacing);
+  text-transform: uppercase;
+}
+
+.cards-emerge .cards-emerge-intro h1,
+.cards-emerge .cards-emerge-intro h2,
+.cards-emerge .cards-emerge-intro h3 {
+  margin: 0;
+  color: var(--cards-emerge-heading-color);
+  font-size: var(--cards-emerge-heading-size);
+  font-weight: var(--cards-emerge-heading-weight);
+  line-height: var(--cards-emerge-heading-line-height);
+}
+
+/* ===== Acronym list ===== */
+.cards-emerge .cards-emerge-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: var(--cards-emerge-list-max-width);
+  display: flex;
+  flex-direction: column;
+  gap: var(--cards-emerge-list-gap);
+}
+
+.cards-emerge .cards-emerge-item {
+  display: grid;
+  grid-template-columns: var(--cards-emerge-letter-col-width) 1fr;
+  align-items: center;
+  column-gap: var(--cards-emerge-row-gap);
+}
+
+.cards-emerge .cards-emerge-letter {
+  color: var(--cards-emerge-letter-color);
+  font-size: var(--cards-emerge-letter-size);
+  font-weight: var(--cards-emerge-letter-weight);
+  line-height: var(--cards-emerge-letter-line-height);
+  text-align: center;
+}
+
+.cards-emerge .cards-emerge-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cards-emerge-title-subtitle-gap);
+}
+
+.cards-emerge .cards-emerge-body :is(h1, h2, h3, h4, h5, h6, p:first-child) {
+  margin: 0;
+  color: var(--cards-emerge-title-color);
+  font-size: var(--cards-emerge-title-size);
+  font-weight: var(--cards-emerge-title-weight);
+  line-height: var(--cards-emerge-title-line-height);
+}
+
+.cards-emerge .cards-emerge-body p {
+  margin: 0;
+  color: var(--cards-emerge-subtitle-color);
+  font-size: var(--cards-emerge-subtitle-size);
+  font-weight: var(--cards-emerge-subtitle-weight);
+  line-height: var(--cards-emerge-subtitle-line-height);
+}
+
+/* ===== Tablet / desktop (min-width) ===== */
+@media (width >= 900px) {
+  .cards-emerge .cards-emerge-intro h1,
+  .cards-emerge .cards-emerge-intro h2,
+  .cards-emerge .cards-emerge-intro h3 {
+    font-size: var(--cards-emerge-heading-size-desktop);
+  }
+
+  .cards-emerge .cards-emerge-list {
+    gap: var(--cards-emerge-list-gap-desktop);
+  }
+
+  .cards-emerge .cards-emerge-item {
+    grid-template-columns: var(--cards-emerge-letter-col-width-desktop) 1fr;
+  }
+
+  .cards-emerge .cards-emerge-letter {
+    font-size: var(--cards-emerge-letter-size-desktop);
+  }
+
+  .cards-emerge .cards-emerge-body :is(h1, h2, h3, h4, h5, h6, p:first-child) {
+    font-size: var(--cards-emerge-title-size-desktop);
+  }
+}

@@ -7,128 +7,31 @@
   padding: 0;
 }
 
+/*
+ * Full-bleed background video hero. The source Figma frame is video-only,
+ * so this block renders just the video (no overlaid text or CTA).
+ */
 .hero-banner {
   position: relative;
+  overflow: hidden;
 
-  /* Own stacking context so the layers below use simple positive z-indexes
-     instead of negative values (which would paint behind the block's own
-     background and hide the video). */
-  isolation: isolate;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  gap: var(--hero-banner-gap);
-  padding: var(--hero-banner-padding-top) var(--hero-banner-padding-right)
-    var(--hero-banner-padding-bottom) var(--hero-banner-padding-left);
-  min-height: var(--hero-banner-min-height);
-
-  /* Brand gradient sits behind the media so it shows while the video loads
-     and as a fallback when no video/poster is present. */
+  /* Brand gradient shows while the video loads and as a no-video fallback. */
   background: var(--hero-banner-placeholder-bg);
-  text-align: center;
+  aspect-ratio: var(--hero-banner-aspect-ratio);
 }
 
-/* Layer 0: full-bleed background media (video or image), above the gradient */
+/* Full-bleed media (video or poster image) fills the block */
 .hero-banner picture,
 .hero-banner video {
-  position: absolute;
-  z-index: 0;
-  inset: 0;
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: var(--hero-banner-media-object-fit);
   box-sizing: border-box;
 }
 
-.hero-banner img,
-.hero-banner video {
-  object-fit: var(--hero-banner-media-object-fit);
+.hero-banner img {
   width: 100%;
   height: 100%;
-}
-
-/* Layer 1: subtle scrim over the background video for text legibility */
-.hero-banner.has-video::before {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  inset: 0;
-  background: var(--hero-banner-media-overlay);
-  pointer-events: none;
-}
-
-/* Layer 2: authored content (the block's direct-child row) sits on top */
-.hero-banner > div {
-  position: relative;
-  z-index: 2;
-}
-
-/* Subheading line */
-.hero-banner h1,
-.hero-banner h2,
-.hero-banner h3,
-.hero-banner h4,
-.hero-banner h5,
-.hero-banner h6,
-.hero-banner p {
-  max-width: var(--hero-banner-content-max-width);
-  margin: 0 auto var(--hero-banner-heading-margin-bottom);
-  font-family: var(--hero-banner-heading-font-family);
-  font-size: var(--hero-banner-heading-font-size);
-  font-weight: var(--hero-banner-heading-font-weight);
-  font-style: var(--hero-banner-heading-font-style);
-  line-height: var(--hero-banner-heading-line-height);
-  letter-spacing: var(--hero-banner-heading-letter-spacing);
-  text-transform: var(--hero-banner-heading-text-transform);
-  color: var(--hero-banner-heading-color);
-}
-
-/* Paragraph that only wraps the CTA button should not carry heading spacing */
-.hero-banner p.button-wrapper {
-  margin-bottom: var(--hero-banner-body-margin-bottom);
-}
-
-/* CTA button (pill) */
-.hero-banner a.button,
-.hero-banner a.button:any-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--hero-banner-button-gap);
-  min-height: var(--hero-banner-button-height);
-  margin: 0;
-  padding: var(--hero-banner-button-padding-y) var(--hero-banner-button-padding-x);
-  font-family: var(--hero-banner-button-font-family);
-  font-size: var(--hero-banner-button-font-size);
-  font-weight: var(--hero-banner-button-font-weight);
-  font-style: var(--hero-banner-button-font-style);
-  line-height: var(--hero-banner-button-line-height);
-  letter-spacing: var(--hero-banner-button-letter-spacing);
-  text-transform: var(--hero-banner-button-text-transform);
-  color: var(--hero-banner-button-color);
-  background: var(--hero-banner-button-background);
-  border: var(--hero-banner-border-width) var(--hero-banner-border-style)
-    var(--hero-banner-border-color);
-  border-radius: var(--hero-banner-button-border-radius);
-  box-shadow: var(--hero-banner-button-shadow-x) var(--hero-banner-button-shadow-y)
-    var(--hero-banner-button-shadow-blur) var(--hero-banner-button-shadow-spread)
-    var(--hero-banner-button-shadow-color);
-  transition: background var(--hero-banner-transition-duration) var(--hero-banner-transition-timing),
-    transform var(--hero-banner-transition-duration) var(--hero-banner-transition-timing);
-}
-
-.hero-banner a.button:hover,
-.hero-banner a.button:focus {
-  color: var(--hero-banner-button-hover-color);
-  background: var(--hero-banner-button-hover-background);
-  transform: var(--hero-banner-button-hover-transform);
-}
-
-@media (width >= 900px) {
-  .hero-banner {
-    padding: var(--hero-banner-padding-top) var(--hero-banner-padding-right-desktop)
-      var(--hero-banner-padding-bottom) var(--hero-banner-padding-left-desktop);
-    min-height: var(--hero-banner-min-height-desktop);
-  }
+  object-fit: var(--hero-banner-media-object-fit);
 }

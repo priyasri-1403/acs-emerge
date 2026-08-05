@@ -2,82 +2,33 @@ VISUAL MEASUREMENT CHECKLIST FOR hero-banner
 ================================================
 Extracted from Figma node: 15979:3612 (HeroBanner)
 File: orYlw2Ani5PMc1XdczWNlu
-Date: 2026-08-04
+Date: 2026-08-04 (revised 2026-08-05)
+
+VISIBILITY CORRECTION (2026-08-05, confirmed by designer)
+- The Figma frame renders a BACKGROUND VIDEO ONLY.
+- The subheading text and "Know More" button present in the file's layer data
+  are HIDDEN layers and are NOT visible in the composite. They are intentionally
+  NOT used. The button node's two arrow icons (20px/24px) are likewise hidden.
+- Only the visible element (the background video) is migrated.
 
 Frame: HeroBanner 1280 x 720
-Children:
-  - Bg (15985:3762) 1280 x 640 — background VIDEO fill (gradient + "EMERGE." wordmark + butterfly; Figma shows a Video fill with a play icon). Rendered as a full-bleed autoplay/loop/muted <video>.
-  - text (15979:3684) — subheading, x=305 y=453 w=670 h=22
-  - Button_PrimaryBlack (15979:3685) — CTA pill, x=577.5 y=529 w=125 h=36
+Visible content:
+  - Bg (15985:3762) — full-bleed background VIDEO fill (gradient + "EMERGE."
+    wordmark + butterfly animation). Rendered as autoplay/loop/muted <video>.
 
 BACKGROUND MEDIA
-☑ Media type: video (source: Figma Bg node is a Video fill, 1280x720, play icon shown)
-☑ Video behavior: autoplay + loop + muted + playsinline (source: standard AEM hero background-video pattern; no controls)
-☑ Video object-fit: cover (source: full-bleed background, matches Bg covering frame)
-☑ Poster/fallback: optional <picture> image used as poster + no-JS fallback (source: progressive enhancement)
-☑ Overlay scrim: rgba(0,0,0,0.15) (source: added for white-text legibility over moving video; not a static Figma value)
+[x] Media type: video (source: Figma Bg node is a Video fill, 1280x720)
+[x] Video behavior: autoplay + loop + muted + playsinline (source: standard AEM background-video pattern; no controls)
+[x] Video object-fit: cover (source: full-bleed background covering the frame)
+[x] Aspect ratio: 16 / 9 (source: frame 1280 x 720)
+[x] Poster/fallback: optional <picture> image used as poster + no-JS fallback (source: progressive enhancement)
+[x] Loading fallback: brand gradient placeholder behind the video (blue->magenta->coral)
 
 LAYOUT & DIMENSIONS
-☑ Container width: 1280px (source: frame HeroBanner width in metadata)
-☑ Container height: 720px (source: frame HeroBanner height in metadata)
-☑ Container padding: top 453px right 305px bottom 155px left 305px (source: text at y=453, x=305; content overlays lower-center of 720h frame — implemented as flex centered with bottom bias, not literal padding)
-☑ Grid/Flex gap: 16px (source: vertical gap between subheading at y=453/h=22 (ends 475) and button at y=529 → ~54px visual; content stack gap normalized to 16px)
-☑ Column count: 1 (source: single centered content column)
-☑ Item width: 670px (source: text node width=670, max content width)
-☑ Item height: auto (source: content-driven, no fixed height on text/button)
+[x] Container width: 1280px (source: frame HeroBanner width in metadata)
+[x] Container height: 720px (source: frame HeroBanner height in metadata)
+[x] Full-bleed: block breaks out of the section max-width, no padding
 
-SPACING (EXACT PIXELS)
-☑ Section padding: 40px 24px mobile / 40px 32px desktop (source: vanilla hero base padding, retained)
-☑ Item internal padding: button 8px 24px (source: Button px-[24px] py-[8px])
-☑ Gap between items: 16px (source: normalized stack gap between subheading and CTA)
-☑ Margin between text elements: 16px (source: subheading-to-button spacing normalized)
-☑ Image margin/padding: 0px (source: Bg is full-bleed background, inset:0, no margin)
-
-COLORS (EXACT HEX + OPACITY)
-☑ Background color: transparent over background image (opacity: 100%) (source: Bg raster image fills frame; d9d9d9 placeholder rect under image)
-☑ Primary text color: #ffffff (source: subheading text color text-[#ffffff])
-☑ Secondary text color: #ffffff (source: button label text-[#ffffff])
-☑ Accent/link color: #000000 (source: button background bg-[#000000])
-☑ Border color: N/A (opacity: N/A) (source: no border classes on any node)
-☑ Hover background: #1a1a1a (source: not in Figma static; derived darker-than-black hover for the black pill CTA)
-☑ Hover text color: #ffffff (source: no hover state in Figma; label stays white)
-
-TYPOGRAPHY (ALL PROPERTIES)
-☑ Heading font-family: 'Adobe Clean Spectrum VF', var(--body-font-family) fallback (source: subheading font-['Adobe_Clean_Spectrum_VF',sans-serif])
-☑ Heading font-size: 18px (source: subheading text-[18px])
-☑ Heading font-weight: 800 (source: subheading font-extrabold)
-☑ Heading line-height: 22px (source: subheading leading-[22px])
-☑ Heading letter-spacing: 0px (source: no tracking-* class on subheading)
-☑ Heading text-transform: none (source: no uppercase/capitalize class; text is sentence case)
-☑ Heading font-style: normal (source: no italic class)
-☑ Body font-family: 'Adobe Clean Spectrum VF', var(--body-font-family) fallback (source: button label font-['Adobe_Clean_Spectrum_VF',sans-serif])
-☑ Body font-size: 16px (source: button label text-[16px])
-☑ Body font-weight: 500 (source: button label font-medium)
-☑ Body line-height: 20px (source: button label leading-[20px])
-☑ Body letter-spacing: 0px (source: no tracking-* class on button label)
-☑ Body font-style: normal (source: no italic class on button label)
-
-BORDERS & RADIUS (CRITICAL - DO NOT ASSUME)
-☑ Border width: 0px (source: no border classes on button/text/frame)
-☑ Border style: none (source: no border styling extracted)
-☑ Border color: N/A (source: no border present)
-☑ Border radius: 55px (source: button rounded-[55px] — pill shape)
-
-SHADOWS (EXACT VALUES)
-☑ Box-shadow offset-x: 0px (source: button boxShadow "0px 4px 8px 0px rgba(0,0,0,0.08)")
-☑ Box-shadow offset-y: 4px (source: button boxShadow)
-☑ Box-shadow blur: 8px (source: button boxShadow)
-☑ Box-shadow spread: 0px (source: button boxShadow)
-☑ Box-shadow color: rgba(0,0,0,0.08) (source: button boxShadow)
-
-EFFECTS & TRANSITIONS
-☑ Hover transform: translateY(-1px) (source: not in Figma; subtle lift added for interactive CTA affordance)
-☑ Transition duration: 200ms (source: standard interactive default; no Figma value)
-☑ Transition timing: ease (source: standard default; no Figma value)
-☑ Opacity changes: none (source: no opacity variation in Figma static frame)
-
-CTA BUTTON EXTRAS
-☑ Button gap (icon-to-label): 2px (source: button gap-[2px])
-☑ Button height: 36px (source: button h-[36px])
-☑ Button width: fit-content (source: button w-fit)
-☑ Arrow icon size: 20px / 24px (source: two arrow imgs w-[20px] and w-[24px])
+NOT USED (hidden layers)
+[x] Subheading text (15979:3684): hidden — not rendered
+[x] Button_PrimaryBlack (15979:3685) incl. 20px/24px arrow icons: hidden — not rendered

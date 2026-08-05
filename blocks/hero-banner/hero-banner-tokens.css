@@ -1,93 +1,19 @@
 /* blocks/hero-banner/hero-banner-tokens.css */
 
-/* All values extracted from hero-banner-measurements.txt (Figma node 15979:3612) */
+/* Values extracted from hero-banner-measurements.txt (Figma node 15979:3612).
+   The frame is video-only, so tokens cover just the background media. */
 
 .hero-banner {
   /* ===== LAYOUT & DIMENSIONS ===== */
   --hero-banner-max-width: 1280px;
-  --hero-banner-content-max-width: 670px;
-  --hero-banner-min-height: 480px;
-  --hero-banner-min-height-desktop: 640px;
-  --hero-banner-padding-top: 40px;
-  --hero-banner-padding-right: 24px;
-  --hero-banner-padding-bottom: 64px;
-  --hero-banner-padding-left: 24px;
-  --hero-banner-padding-right-desktop: 32px;
-  --hero-banner-padding-left-desktop: 32px;
-  --hero-banner-gap: 16px;
-  --hero-banner-columns: 1;
 
-  /* ===== CONTAINER COLORS ===== */
-  --hero-banner-background: transparent; /* full-bleed background video/image supplies the color */
+  /* Video/frame intrinsic ratio: 1280 x 720 = 16 / 9 */
+  --hero-banner-aspect-ratio: 16 / 9;
+
+  /* ===== BACKGROUND MEDIA (video / image) ===== */
+  --hero-banner-media-object-fit: cover;
 
   /* Brand gradient placeholder: shown behind the video while it loads and as a
      no-video fallback. Approximates the Figma blue->magenta->coral wordmark bg. */
   --hero-banner-placeholder-bg: linear-gradient(115deg, #2c1a8f 0%, #7b1fa2 38%, #d81b7a 66%, #ff5a4d 100%);
-
-  /* ===== BACKGROUND MEDIA (video / image) ===== */
-  --hero-banner-media-object-fit: cover;
-  --hero-banner-media-overlay: rgb(0 0 0 / 15%); /* subtle scrim for text legibility over video */
-
-  /* ===== TYPOGRAPHY - HEADING (subheading line) ===== */
-  --hero-banner-heading-font-family: 'Adobe Clean Spectrum VF', var(--body-font-family);
-  --hero-banner-heading-font-size: 18px;
-  --hero-banner-heading-font-weight: 800;
-  --hero-banner-heading-font-style: normal;
-  --hero-banner-heading-line-height: 22px;
-  --hero-banner-heading-letter-spacing: 0;
-  --hero-banner-heading-text-transform: none;
-  --hero-banner-heading-color: #fff;
-  --hero-banner-heading-margin-bottom: 16px;
-
-  /* ===== TYPOGRAPHY - BODY (button label) ===== */
-  --hero-banner-body-font-family: 'Adobe Clean Spectrum VF', var(--body-font-family);
-  --hero-banner-body-font-size: 16px;
-  --hero-banner-body-font-weight: 500;
-  --hero-banner-body-font-style: normal;
-  --hero-banner-body-line-height: 20px;
-  --hero-banner-body-letter-spacing: 0;
-  --hero-banner-body-color: #fff;
-  --hero-banner-body-margin-bottom: 0;
-
-  /* ===== CTA BUTTON ===== */
-  --hero-banner-button-font-family: 'Adobe Clean Spectrum VF', var(--body-font-family);
-  --hero-banner-button-font-size: 16px;
-  --hero-banner-button-font-weight: 500;
-  --hero-banner-button-font-style: normal;
-  --hero-banner-button-line-height: 20px;
-  --hero-banner-button-letter-spacing: 0;
-  --hero-banner-button-text-transform: none;
-  --hero-banner-button-color: #fff;
-  --hero-banner-button-background: #000;
-  --hero-banner-button-border-radius: 55px; /* pill */
-  --hero-banner-button-padding-x: 24px;
-  --hero-banner-button-padding-y: 8px;
-  --hero-banner-button-height: 36px;
-  --hero-banner-button-gap: 2px;
-
-  /* ===== BORDERS ===== */
-  --hero-banner-border-width: 0;
-  --hero-banner-border-style: none;
-  --hero-banner-border-color: transparent;
-  --hero-banner-border-radius: 0;
-
-  /* ===== BUTTON SHADOW ===== */
-  --hero-banner-button-shadow-x: 0px;
-  --hero-banner-button-shadow-y: 4px;
-  --hero-banner-button-shadow-blur: 8px;
-  --hero-banner-button-shadow-spread: 0px;
-  --hero-banner-button-shadow-color: rgb(0 0 0 / 8%);
-
-  /* ===== HOVER STATES ===== */
-  --hero-banner-button-hover-background: #1a1a1a;
-  --hero-banner-button-hover-color: #fff;
-  --hero-banner-button-hover-transform: translateY(-1px);
-
-  /* ===== TRANSITIONS ===== */
-  --hero-banner-transition-duration: 200ms;
-  --hero-banner-transition-timing: ease;
-
-  /* ===== SPACING BETWEEN ELEMENTS ===== */
-  --hero-banner-image-margin-bottom: 0;
-  --hero-banner-content-gap: 16px;
 }

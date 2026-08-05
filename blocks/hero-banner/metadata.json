@@ -17,8 +17,8 @@
     "imagePattern": "video"
   },
   "contentPattern": {
-    "structure": "background video + subheading + 1 CTA",
-    "buttonCount": 1,
+    "structure": "full-bleed background video only (no overlaid text or CTA)",
+    "buttonCount": 0,
     "imageCount": 0,
     "videoCount": 1,
     "backgroundMedia": "video"
@@ -26,11 +26,10 @@
   "reuseGuidance": {
     "suitableFor": [
       "hero sections",
-      "full-bleed autoplaying background video with overlaid subheading and single CTA"
+      "full-bleed autoplaying background video with no overlaid content"
     ],
     "notSuitableFor": [
-      "text-only pages",
-      "heroes needing a large editorial headline (this variant leads with a small subheading, not an H1)"
+      "heroes that need overlaid text or a CTA (this variant is video-only)"
     ]
   },
   "usage": {

@@ -31,6 +31,10 @@ function buildBackgroundVideo(link, poster) {
 
 /**
  * loads and decorates the hero-banner block
+ *
+ * This hero is a full-bleed background video only — the source Figma frame
+ * contains just the video (any text/CTA layers in the file are hidden and
+ * intentionally not rendered).
  * @param {Element} block The block element
  */
 export default function decorate(block) {
@@ -47,9 +51,16 @@ export default function decorate(block) {
     const picture = block.querySelector('picture');
     if (picture) (picture.closest('p') || picture).remove();
 
-    // ...and add the video as the first *direct* child of the block so it can be
-    // layered as a full-bleed background behind the content (see CSS z-index layers).
+    // ...add the video as the first direct child so it fills the block.
     block.prepend(video);
+
+    // Drop the now-empty authored row/cell wrappers left behind.
+    block.querySelectorAll(':scope > div').forEach((row) => {
+      if (!row.textContent.trim() && !row.querySelector('img, picture, video, a, button')) {
+        row.remove();
+      }
+    });
+
     block.classList.add('has-video');
   }
 }

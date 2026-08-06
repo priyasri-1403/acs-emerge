@@ -14,6 +14,13 @@
   --hero-banner-media-object-fit: cover;
 
   /* Brand gradient placeholder: shown behind the video while it loads and as a
-     no-video fallback. Approximates the Figma blue->magenta->coral wordmark bg. */
-  --hero-banner-placeholder-bg: linear-gradient(115deg, #2c1a8f 0%, #7b1fa2 38%, #d81b7a 66%, #ff5a4d 100%);
+     no-video fallback. Built from global brand color tokens (blue->magenta->coral)
+     so it tracks the active theme. */
+  --hero-banner-placeholder-bg: linear-gradient(
+    115deg,
+    var(--color-blue-1300) 0%,
+    var(--color-magenta-1000) 45%,
+    var(--color-magenta-900) 66%,
+    var(--color-red-900) 100%
+  );
 }

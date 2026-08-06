@@ -1,39 +1,42 @@
 /* blocks/cards-emerge/cards-emerge-tokens.css */
 
-/* Values derived from the Figma screenshot (node 15998:1153). Colors/sizes are
-   close approximations pending exact design_context extraction. Only visible
-   elements are represented — decorative butterfly/mesh are intentionally omitted. */
+/* Retrofitted to reference the global design tokens (styles/global-tokens.css)
+   generated from the ACS Figma variable system. Colors and type now map onto
+   the Spectrum platform scale + semantic color tokens instead of the earlier
+   screenshot-approximated literals. */
 
 .cards-emerge {
-  /* ===== COLORS ===== */
-  --cards-emerge-bg: #fff;
-  --cards-emerge-eyebrow-color: #6b6b6b;
-  --cards-emerge-heading-color: #1a1a1a;
-  --cards-emerge-letter-color: #e0197d;
-  --cards-emerge-title-color: #1a1a1a;
-  --cards-emerge-subtitle-color: #6b6b6b;
+  /* ===== COLORS (semantic global tokens) ===== */
+  --cards-emerge-bg: var(--color-background-base);
+  --cards-emerge-eyebrow-color: var(--color-detail);
+  --cards-emerge-heading-color: var(--color-heading);
 
-  /* ===== TYPOGRAPHY (mobile base) ===== */
-  --cards-emerge-eyebrow-size: 12px;
-  --cards-emerge-eyebrow-weight: 600;
+  /* Large acronym initial uses the brand magenta visual accent */
+  --cards-emerge-letter-color: var(--color-magenta-visual);
+  --cards-emerge-title-color: var(--color-title);
+  --cards-emerge-subtitle-color: var(--color-detail);
+
+  /* ===== TYPOGRAPHY (mobile base — platform scale) ===== */
+  --cards-emerge-eyebrow-size: var(--detail-size-xs);
+  --cards-emerge-eyebrow-weight: var(--detail-font-weight);
   --cards-emerge-eyebrow-spacing: 1px;
-  --cards-emerge-heading-size: 24px;
-  --cards-emerge-heading-weight: 600;
-  --cards-emerge-heading-line-height: 1.3;
-  --cards-emerge-letter-size: 40px;
-  --cards-emerge-letter-weight: 700;
+  --cards-emerge-heading-size: var(--heading-size-m);
+  --cards-emerge-heading-weight: var(--heading-font-weight);
+  --cards-emerge-heading-line-height: var(--line-height-500);
+  --cards-emerge-letter-size: var(--font-size-1000);
+  --cards-emerge-letter-weight: var(--font-weight-bold);
   --cards-emerge-letter-line-height: 1;
-  --cards-emerge-title-size: 17px;
-  --cards-emerge-title-weight: 700;
-  --cards-emerge-title-line-height: 1.3;
-  --cards-emerge-subtitle-size: 13px;
-  --cards-emerge-subtitle-weight: 400;
-  --cards-emerge-subtitle-line-height: 1.4;
+  --cards-emerge-title-size: var(--title-size-l);
+  --cards-emerge-title-weight: var(--title-font-weight-strong);
+  --cards-emerge-title-line-height: var(--line-height-300);
+  --cards-emerge-subtitle-size: var(--detail-size-s);
+  --cards-emerge-subtitle-weight: var(--body-font-weight);
+  --cards-emerge-subtitle-line-height: var(--line-height-100);
 
   /* ===== TYPOGRAPHY (desktop overrides, applied via media query) ===== */
-  --cards-emerge-heading-size-desktop: 34px;
-  --cards-emerge-letter-size-desktop: 48px;
-  --cards-emerge-title-size-desktop: 18px;
+  --cards-emerge-heading-size-desktop: var(--heading-size-l);
+  --cards-emerge-letter-size-desktop: var(--font-size-1100);
+  --cards-emerge-title-size-desktop: var(--title-size-l);
 
   /* ===== SPACING (mobile base) ===== */
   --cards-emerge-section-padding-block: 32px;

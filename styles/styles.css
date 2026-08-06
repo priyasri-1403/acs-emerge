@@ -10,6 +10,9 @@
  * governing permissions and limitations under the License.
  */
 
+/* Global design tokens generated from the ACS Figma variable system */
+@import url('./global-tokens.css');
+
 :root {
   /* colors */
   --background-color: white;
